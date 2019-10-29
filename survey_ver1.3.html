@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" href="img/icon.png" type="image/gif" sizes="16x16">
+    <style>
+        form {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(59, 59, 207);
+
+        }
+
+        table {
+            border-collapse: collapse;
+            /* 合併表格的邊框 */
+            margin: auto;
+            /* 將表格置中 */
+        }
+
+        th {
+            height: 60px;
+            /* 表格標題列高度固定--字體大小到article裡面改*/
+        }
+
+        table tr td,
+        th {
+            border: 3px #565757 dashed;
+            /* 邊框樣式 */
+            text-align: center;
+        }
+
+        .pic {
+            width: 300px;
+        }
+
+        .article {
+            width: 1580px;
+            margin: auto;
+            height: 680px;
+            font-size: 28px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* fixed模式，不管外面、裡面怎麼滾，他都是不會動的 */
+            background-position: center;
+            background-size: cover;
+            /* cover會保持背景圖片的寬高比例縮放到剛好完全覆蓋定義背景的區域 */
+            line-height: 28px;
+            /* 三個div的寬、置中、高、文字大小、背景圖片不重複、背景模式、背景位置、背景覆蓋、設定字體範圍高度 */
+        }
+
+        .section1 {
+            color: rgb(255, 255, 255);
+            background-image: url(img/bg01.jpg);
+            text-shadow: 5px 4px 5px gray;
+            /* 文字陰影 向右 向下 模糊 顏色 */
+            font-weight: bold;
+        }
+
+        .section2 {
+            color: white;
+            background-image: url(img/bg02.jpg);
+            text-shadow: 5px 4px 5px gray;
+            font-weight: bold;
+        }
+
+        .section3 {
+            color: white;
+            background-image: url(img/bg03.jpg);
+            text-shadow: 5px 4px 5px gray;
+            font-weight: bold;
+        }
+
+        .section4 {
+            text-align: center;
+            color: white;
+            background-image: url(img/bg04.jpg);
+            text-shadow: 5px 4px 5px gray;
+            font-weight: bold;
+        }
+
+        .blank {
+            height: 100px;
+        }
+
+        .send {
+
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            border: 0px;
+            background-color: #08419e;
+            color: #ffffff;
+            border-radius: 10px;
+            /* 邊框圓角 */
+            cursor: pointer;
+            /* 小手手 */
+        }
+
+        .send:hover {
+            /* 手手過去的動作 */
+            color: #08419e;
+            background-color: #ffffff;
+            border: 2px #08419e solid;
+            /* 反轉.send的顏色然後邊框實線 */
+        }
+
+        .quit {
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            border: 0px;
+            background-color: #d6371b;
+            color: #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .quit:hover {
+            color: #d6371b;
+            background-color: #ffffff;
+            border: 2px #d6371b solid;
+
+        }
+
+        .goTop {
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+            border: 0px;
+            background-color: #058d2ecb;
+            color: #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .goTop:hover {
+            color: #058d2e;
+            background-color: #ffffff;
+            border: 2px #058d2ecb solid;
+
+        }
+    </style>
+    <script type="text/javascript">
+
+        function closewin() {
+
+            window.opener = null;
+            window.open('', '_self');
+            window.close();
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <img id="top" src="img/00.png" alt="">
+    <h1 style="text-align: center; font-size: 60px; color: rgb(59, 59, 207);">飛機愛好度調查</h1>
+    <form action="">您喜歡飛機嗎？
+        <br>
+        <input type="radio" id="like" name="fav">
+        <label for="like">喜歡</label>
+        <input type="radio" id="dislike" name="fav">
+        <label for="dislike">不喜歡</label>
+    </form>
+    <br>
+    <form action="">您經查搭乘飛機嗎？
+        <br>
+        <input type="radio" id="usually" name="freq">
+        <label for="usually">經常</label>
+        <input type="radio" id="often" name="freq">
+        <label for="often">偶爾</label>
+        <input type="radio" id="few" name="freq">
+        <label for="few">很少</label>
+        <input type="radio" id="never" name="freq">
+        <label for="never">不曾</label>
+    </form>
+
+
+    <div>
+        <div class="article section1">
+            <table>
+                <tr>
+                    <th colspan="5">請問哪一架飛機是波音787</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="11"><img class="pic" src="img/380-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="12"><img class="pic" src="img/747-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="13"><img class="pic" src="img/a321-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="14"><img class="pic" src="img/787-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="15"><img class="pic" src="img/01.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" ; id="11" ; name="Q1"></td>
+                    <td> <input type="radio" ; id="12" ; name="Q1"></td>
+                    <td> <input type="radio" ; id="13" ; name="Q1"></td>
+                    <td> <input type="radio" ; id="14" ; name="Q1"></td>
+                    <td> <input type="radio" ; id="15" ; name="Q1"></td>
+                </tr>
+
+                <tr>
+                    <th colspan="5">請問哪一架飛機是空中巴士A350</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="21"><img class="pic" src="img/747-02.jpg"" alt=""></label></td>
+                            <td class=" pic"><label for="22"><img class="pic" src="img/02.jpg" alt=""></label></td>
+                    <td class="pic"><label for="23"><img class="pic" src="img/a350-02.jpg" alt=""></label></td>
+                    <td class="pic"><label for="24"><img class="pic" src="img/787-02.jpg" alt=""></label></td>
+                    <td class="pic"><label for="25"><img class="pic" src="img/777-02.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" ; id="21" ; name="Q2"></td>
+                    <td> <input type="radio" ; id="22" ; name="Q2"></td>
+                    <td> <input type="radio" ; id="23" ; name="Q2"></td>
+                    <td> <input type="radio" ; id="24" ; name="Q2"></td>
+                    <td> <input type="radio" ; id="25" ; name="Q2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="blank"></div>
+        <div class="article section2">
+            <table>
+                <tr>
+                    <th colspan="5">請挑出型號是波音747的飛機</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="31"><img class="pic" src="img/380-03.jpg" alt=""></label></td>
+                    <td class="pic"><label for="32"><img class="pic" src="img/747-03.jpg" alt=""></label></td>
+                    <td class="pic"><label for="33"><img class="pic" src="img/747-06.jpg" alt=""></label></td>
+                    <td class="pic"><label for="34"><img class="pic" src="img/380-04.jpg" alt=""></label></td>
+                    <td class="pic"><label for="35"><img class="pic" src="img/747-07.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" ; id="31" ; name="Q3"></td>
+                    <td> <input type="checkbox" ; id="32" ; name="Q3"></td>
+                    <td> <input type="checkbox" ; id="33" ; name="Q3"></td>
+                    <td> <input type="checkbox" ; id="34" ; name="Q3"></td>
+                    <td> <input type="checkbox" ; id="35" ; name="Q3"></td>
+                </tr>
+
+                <tr>
+                    <th colspan="5">請挑出型號是空中巴士A380的飛機</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="41"><img class="pic" src="img/747-02.jpg" alt=""></label></td>
+                    <td class=" pic"><label for="42"><img class="pic" src="img/747-05.jpg" alt=""></label></td>
+                    <td class="pic"><label for="43"><img class="pic" src="img/380-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="44"><img class="pic" src="img/380-08.jpg" alt=""></label></td>
+                    <td class="pic"><label for="45"><img class="pic" src="img/380-07.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" ; id="41" ; name="Q4"></td>
+                    <td> <input type="checkbox" ; id="42" ; name="Q4"></td>
+                    <td> <input type="checkbox" ; id="43" ; name="Q4"></td>
+                    <td> <input type="checkbox" ; id="44" ; name="Q4"></td>
+                    <td> <input type="checkbox" ; id="45" ; name="Q4"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="blank"></div>
+        <div class="article section3">
+            <table>
+                <tr>
+                    <th colspan="5">請挑出型號是波音777的飛機</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="51"><img class="pic" src="img/777-01.jpg" alt=""></label></td>
+                    <td class="pic"><label for="52"><img class="pic" src="img/777-03.png" alt=""></label></td>
+                    <td class="pic"><label for="53"><img class="pic" src="img/a350-10.jpg" alt=""></label></td>
+                    <td class="pic"><label for="54"><img class="pic" src="img/777-05.jpg" alt=""></label></td>
+                    <td class="pic"><label for="55"><img class="pic" src="img/a321-09.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" ; id="51" ; name="Q5"></td>
+                    <td> <input type="checkbox" ; id="52" ; name="Q5"></td>
+                    <td> <input type="checkbox" ; id="53" ; name="Q5"></td>
+                    <td> <input type="checkbox" ; id="54" ; name="Q5"></td>
+                    <td> <input type="checkbox" ; id="55" ; name="Q5"></td>
+                </tr>
+
+                <tr>
+                    <th colspan="5">請挑出型號是空中巴士A321的飛機</th>
+                </tr>
+                <tr>
+                    <td class="pic"><label for="61"><img class="pic" src="img/a321-10.jpg" alt=""></label></td>
+                    <td class="pic"><label for="62"><img class="pic" src="img/787-05.jpg" alt=""></label></td>
+                    <td class="pic"><label for="63"><img class="pic" src="img/787-06.jpg" alt=""></label></td>
+                    <td class="pic"><label for="64"><img class="pic" src="img/a350-09.jpg" alt=""></label></td>
+                    <td class="pic"><label for="65"><img class="pic" src="img/a321-08.jpg" alt=""></label></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" ; id="61" ; name="Q6"></td>
+                    <td> <input type="checkbox" ; id="62" ; name="Q6"></td>
+                    <td> <input type="checkbox" ; id="63" ; name="Q6"></td>
+                    <td> <input type="checkbox" ; id="64" ; name="Q6"></td>
+                    <td> <input type="checkbox" ; id="65" ; name="Q6"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="blank"></div>
+        <div class="article section4">
+            <iframe width="1200" height="680" src="https://www.youtube.com/embed/PJoXvbnAbmA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <br><br>
+    <div style="text-align: center;">
+        <a href="#top"><input class="goTop" type="button" value="回到最上"></a>
+        <input class="send" type="button" value="送出問卷">
+        <input class="quit" type="button" value="退出問卷" onclick="closewin();">
+    </div>
+
+
+
+
+</body>
+
+</html>
